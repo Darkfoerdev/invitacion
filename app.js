@@ -149,11 +149,11 @@ function initForm() {
       successText.textContent =
         fechaOk === "si"
           ? "Ya guardé tu respuesta. ¡Nos vemos el 19 de agosto! 🕯️❤️"
-          : `Ya guardé tu respuesta y la nueva fecha (${formatoBonito(fechaFinal)}). ¡Nos vemos ahí! 🕯️❤️`;
+          : `Ya guardé tu respuesta y la nueva fecha (${formatoBonito(fechaFinal)}). ¡Nos vemos mi pecosa! 🕯️❤️`;
       successBox.hidden = false;
     } catch (err) {
       errorBox.textContent =
-        "No pude enviar tu respuesta 😢 revisa tu conexión e inténtalo de nuevo.";
+        "No pude enviar tu respuesta 😢 revisa tu conexión e inténtalo de nuevo, o me avisas bb";
       errorBox.hidden = false;
       submitBtn.disabled = false;
       submitText.textContent = "Enviar mi respuesta";
