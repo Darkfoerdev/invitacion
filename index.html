@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Angélica María 🕯️</title>
+<meta name="description" content="Una invitación especial para Angélica María Cabrera Figueroa">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕯️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scene" aria-hidden="false">
+  <div class="fireflies">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ENVELOPE -->
+  <section id="envelope-screen" class="envelope-screen">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir la invitación">
+      <div class="envelope-shadow"></div>
+      <div class="envelope-back"></div>
+      <div class="envelope-letter">
+        <div class="letter-lines">
+          <span class="wax-seal">🕯️</span>
+          <p class="letter-to">Para mi amor,<br><strong>Angélica María</strong></p>
+        </div>
+      </div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-front-left"></div>
+      <div class="envelope-front-right"></div>
+    </div>
+    <p class="tap-hint">Toca el sobre para abrirlo 💌</p>
+  </section>
+
+  <!-- INVITATION -->
+  <main id="invitation" class="invitation" hidden>
+    <div class="card">
+
+      <div class="lights" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <p class="eyebrow">✦ Invitación especial para mi amor ✦</p>
+      <h1 class="title">¡Para ti,<br>mi Angélica!</h1>
+
+      <p class="to-label">Para:</p>
+      <p class="to-name">Angélica María<br>Cabrera Figueroa</p>
+
+      <div class="divider">❦</div>
+
+      <p class="question-lead">¿Cuántos años llevamos juntos ya?</p>
+      <ul class="checklist" aria-hidden="true">
+        <li><span class="box"></span> ¿1 año?</li>
+        <li><span class="box checked">✕</span> ¿10 años? <em>(¡uff, no lo sé!)</em></li>
+        <li><span class="box"></span> ¿Meses?</li>
+        <li><span class="box"></span> ¿He perdido la cuenta…?</li>
+      </ul>
+
+      <p class="lead-text">Lo único que sé es que sigo loco por ti.<br>Por eso quiero invitarte a una…</p>
+
+      <h2 class="event-title">Cena Romántica<br>de Aniversario</h2>
+
+      <div class="details">
+        <p><span class="detail-label">Lugar</span> ¡Shhh… es una sorpresa total! 🎁</p>
+        <p><span class="detail-label">Fecha</span> <span id="fecha-propuesta-texto">Miércoles 19 de agosto de 2026</span></p>
+      </div>
+
+      <div class="divider">❦</div>
+
+      <form id="rsvp-form" novalidate>
+
+        <!-- honeypot anti-spam, oculto -->
+        <input type="text" name="empresa" id="empresa" class="hp" tabindex="-1" autocomplete="off">
+
+        <fieldset class="field-group">
+          <legend>¿Te es posible esa fecha?</legend>
+          <div class="pill-choice">
+            <label class="pill">
+              <input type="radio" name="fecha_ok" value="si" checked>
+              <span>Sí, ahí estaré 🕯️</span>
+            </label>
+            <label class="pill">
+              <input type="radio" name="fecha_ok" value="no">
+              <span>Esa no puedo, elijo otra</span>
+            </label>
+          </div>
+
+          <div id="date-picker-wrap" class="date-picker-wrap" hidden>
+            <label for="fecha_alterna">Elige una fecha que sí te sirva</label>
+            <input type="date" id="fecha_alterna" name="fecha_alterna">
+            <p class="hint">Solo puedes elegir desde mañana en adelante ✨</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>¿Quieres ir conmigo? <span class="hearts">❤️</span></legend>
+          <div class="rsvp-choice">
+            <button type="button" class="btn-si" id="btn-si">
+              <span class="heart-icon">♥</span> Sí <span class="heart-icon">♥</span>
+            </button>
+            <button type="button" class="btn-no-ghost" id="btn-no">
+              <span class="heart-icon">♥</span> Sí <span class="heart-icon">♥</span>
+            </button>
+          </div>
+          <p class="no-option-note">No hay otra opción 😉</p>
+          <input type="hidden" id="respuesta" name="respuesta" value="si">
+        </fieldset>
+
+        <fieldset class="field-group">
+          <label for="mensaje" class="msg-label">¿Quieres decirme algo, amor?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí lo que sea que sientas ahora mismo…"></textarea>
+        </fieldset>
+
+        <button type="submit" class="btn-submit" id="btn-submit">
+          <span id="btn-submit-text">Enviar mi respuesta</span> <span class="heart-icon">♥</span>
+        </button>
+
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+      </form>
+
+      <div id="success-message" class="success-message" hidden>
+        <p class="success-seal">🕯️❤️🕯️</p>
+        <h3>¡Recibido, mi amor!</h3>
+        <p id="success-text">Ya guardé tu respuesta. Nos vemos pronto…</p>
+      </div>
+
+      <p class="signature">Tu Amorcito ❤️</p>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
